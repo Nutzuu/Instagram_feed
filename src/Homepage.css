@@ -1,12 +1,15 @@
-.homepage{
-    display: flex;
-    flex-direction: row;
+.homepage {
+    padding-left: 300px;
 }
 
-.homepage__nav{
-    flex: 0.2;
+.homepage__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
 }
 
-.homepage__timeline{
-    flex: 0.8;
+.homepage__timeline {
+/*    */
 }

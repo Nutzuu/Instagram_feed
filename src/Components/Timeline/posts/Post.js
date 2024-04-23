@@ -14,7 +14,7 @@ function Post(props) {
     <div className='post'>
       <div className="post__header">
         <div className="post__headerAuthor">
-          <Avatar>{user.charAt(0).toUpperCase()}</Avatar>
+          <Avatar className='just_photo'>{user.charAt(0).toUpperCase()}</Avatar>
           {user} • 
           <span>{timestamp}</span>
         </div>

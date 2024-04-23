@@ -24,9 +24,9 @@ function Timeline() {
       timestamp: "1d"
     },
     {
-      user: "claudiu_vitelaru",
+      user: "claudiu.andrei1979",
       postImage: "https://nystudio107.com/img/blog/_1200x675_crop_center-center_82_line/image_optimzation.jpg",
-      likes: 1,
+      likes: "300",
       timestamp: "1d"
     },
   ]);

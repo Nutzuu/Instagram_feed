@@ -2,7 +2,10 @@ import React from "react";
 import './LoginForm.css';
 import { FaUserAlt, FaLock } from "react-icons/fa";
 
+
 const LoginForm = () => {
+    
+    
     return (
         <div className="wrapper">
             <form action="">

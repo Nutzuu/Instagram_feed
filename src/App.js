@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import LoginForm from './Components/LoginForm/LoginForm';
-import Register from './Components/Register/Register';
-import Forgot from './Components/Forgot/Forgot';
+import Register from './Components/LoginForm/Register';
+import Forgot from './Components/LoginForm/Forgot';
 import Homepage from './Homepage';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import LoginToken from './requests/auth';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
 
   const token = null;
 
-  if (token) {
+  if (!token) {
     return <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginForm />} />

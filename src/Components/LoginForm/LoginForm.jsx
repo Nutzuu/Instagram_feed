@@ -1,21 +1,29 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import './LoginForm.css';
 import { FaUserAlt, FaLock } from "react-icons/fa";
+import axios from "axios";
+import { useAuth } from "../../contexts/AuthContexts";
 
 
 const LoginForm = () => {
     
-    
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+        const {login} = useAuth()
+        useEffect(() => {
+            console.log("Hello"); 
+        }, []);
     return (
         <div className="wrapper">
-            <form action="">
+            <div >
                 <h1>Login</h1>
                 <div className="input-box">
-                    <input type="text" placeholder="Username" required />
+                    <input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />    
                     <FaUserAlt className="icon" />
                 </div>
                 <div className="input-box">
-                    <input type="password" placeholder="Password" required />
+                    <input type="password" placeholder="Parola" value={password} onChange={(e) => setPassword(e.target.value)} />
                     <FaLock className="icon" />
                 </div>
 
@@ -24,11 +32,11 @@ const LoginForm = () => {
                     <a href="/forgot">Forgot password?</a>
                 </div>
 
-                <button type="submit">Login</button>
+                <button onClick={() => login(username, password)}>Login</button>
                 <div className="register-link">
                     <p>Don't have an account? <a href="/register">Register</a></p>
                 </div>
-            </form>
+            </div>
 
         </div>
     )

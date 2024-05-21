@@ -5,14 +5,16 @@ import Register from './Components/LoginForm/Register';
 import Forgot from './Components/LoginForm/Forgot';
 import Homepage from './Homepage';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import LoginToken from './requests/auth';
+import { useAuth } from './contexts/AuthContexts';
+
+
 
 function App() {
 
   // we need to check for auth
   // we figure out if the client has a token
 
-  const token = null;
+  const {token} = useAuth()
 
   if (!token) {
     return <BrowserRouter>

@@ -46,7 +46,26 @@
     margin-left: 10px;
 }
 
-.sidenav__more{
+.sidenav__log{
     position: fixed;
     bottom: 3px;
+    font-size: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+      width: 80%;
+      padding: 10px;
+      height: auto; 
+      border: none; 
+      backdrop-filter: none; 
+      position: relative; 
+      margin-top: 20px; 
+    }
+  
+    .sidenav__log {
+      position: static; 
+      margin-top: 20px; 
+    }
+  }
+  

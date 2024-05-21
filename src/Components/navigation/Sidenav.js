@@ -7,9 +7,14 @@ import SlideshowIcon from "@mui/icons-material/Slideshow";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import MenuIcon from "@mui/icons-material/Menu";
+import { BiLogOut } from "react-icons/bi";
+import { useAuth } from '../../contexts/AuthContexts';
+
 
 function Sidenav() {
+
+  const {logout} = useAuth();
+
   return (
     <div className="sidenav">
       <img
@@ -47,10 +52,10 @@ function Sidenav() {
           <span>Create</span>
         </button>
       </div>
-      <div className="sidenav__more">
-        <button className='sidenav__button'>
-          <MenuIcon />
-          <span>More</span>
+      <div className="sidenav__log">
+        <button className='sidenav__button' onClick={logout}>
+          <BiLogOut />
+          <span>Log out</span>
         </button>
       </div>
     </div> 

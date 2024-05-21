@@ -33,6 +33,13 @@ export const AuthProvider = ({ children }) => {
             });
             console.log('Registration successful:', response.data);
             
+            const { token } = response.data;
+            localStorage.setItem('token', token);
+            localStorage.setItem('username', response.data.username);
+            localStorage.setItem('email', response.data.email);
+
+            return response.data;
+
         } catch (error) {
             console.error('Registration failed:', error);
         

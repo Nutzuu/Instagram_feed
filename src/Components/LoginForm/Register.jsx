@@ -31,7 +31,8 @@ const RegisterForm = () => {
         }
         
         try {
-            await register(username, email, password);
+            const data = await register(username, email, password);
+            console.log('User registred: ', data)
         } catch (error) {
             console.error("Eroare la înregistrare:", error);
             setErrMsg('Înregistrarea a eșuat. Te rog să încerci din nou.');
